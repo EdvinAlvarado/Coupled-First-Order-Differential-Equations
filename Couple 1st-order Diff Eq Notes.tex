@@ -117,11 +117,41 @@
 
 			\begin{align*}
 				(a+d)^2-4(ad-bc) < 0 \\
-				(a-d)^2 +4bc < 0 \\ 
-				bc > \frac{(a-d)^2}{4}
+				% (a-d)^2 +4bc < 0 \\ 
+				% bc > \frac{(a-d)^2}{4}
 			\end{align*}
 
-			If \emph{b} or \emph{c} is negative and it fulfills the former equation then the roots will be complex.
+			A 3D Model can be done by joining the symmetric independent variables such as \emph{b} with \emph{c} and \emph{a} with \emph{d}. They're symmetric or conjoined in such a way that two random values can be assgined to each element to a pair and it would give the same result as if you had assigned the values in reverse. In mathematical notation:
+
+			\begin{equation}
+				f(a,b,c,d) = (a+d)^2-4(ad-bc)
+			\end{equation}
+
+			\begin{equation}
+				f(a,x_0,x_1,d) = f(a,x_1,x_0,d)
+			\end{equation}
+
+			This is also true for the pair \emph{a} and \emph{d}. This is thanks the variables being multiplied and/or being inside a even exponential. So the model is the following:
+
+			\begin{align*}
+				A &= ad \\ 
+				B &= bc \\
+				\\
+				f(a,b,c,d) &= (a+d)^2-4(ad-bc) \\
+				&= \left( \frac{ad}{d} + d \right)^2 - 4(ad-bc) \\
+				f(A,B,d) &= \left( \frac{A}{d} + d \right)^2 - 4(A-B)
+			\end{align*}
+
+			Although \emph{d} couldn't be fully eliminated, as \emph{A} includes variable \emph{d}, The 3D model should still accurately portray the function of the square root.
+
+			% If \emph{b} or \emph{c} is negative and it fulfills the former equation then the roots will be complex.
+
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=0.8\textwidth]{3Dmodel.png}
+				\caption{Python Model}
+				\label{fig:3dmodel}
+			\end{figure}
 
 		
 		\subsection{Roots of Equation}
